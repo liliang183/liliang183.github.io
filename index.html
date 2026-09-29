@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f5f0">
+  <meta name="description" content="Liang Li is a theoretical nuclear physicist studying heavy-ion reaction dynamics, quasifission, fusion, and superheavy nuclei with time-dependent density functional theory.">
+  <title>Liang Li · Nuclear Theory</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='13' fill='%231b3037'/%3E%3Ccircle cx='24' cy='32' r='11' fill='%23c56740'/%3E%3Ccircle cx='42' cy='32' r='8' fill='%23f3dfb5'/%3E%3C/svg%3E">
+  <style>
+    :root { --paper:#f7f5f0; --ink:#21343a; --muted:#647477; --line:#d9dedb; --accent:#ab5638; --deep:#172d34; --cream:#ead9b3; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; color:var(--ink); background:var(--paper); font-family:Georgia, 'Times New Roman', serif; font-size:17px; line-height:1.65; }
+    a { color:inherit; text-decoration:none; }
+    a:focus-visible { outline:3px solid var(--accent); outline-offset:4px; }
+    .wrap { width:min(1120px, calc(100% - 64px)); margin-inline:auto; }
+    .site-header { border-bottom:1px solid var(--line); }
+    .nav { min-height:76px; display:flex; align-items:center; justify-content:space-between; gap:24px; }
+    .brand { display:flex; align-items:center; gap:13px; font:700 16px/1.15 Arial, sans-serif; letter-spacing:.015em; }
+    .brand-mark { width:31px; height:31px; display:grid; place-items:center; background:var(--deep); color:var(--paper); border-radius:50%; font:italic 20px Georgia,serif; }
+    .nav-links { display:flex; align-items:center; gap:31px; font:600 12px/1.4 Arial,sans-serif; text-transform:uppercase; letter-spacing:.12em; }
+    .nav-links a:hover, .text-link:hover { color:var(--accent); }
+    .hero { display:grid; grid-template-columns:1.15fr .85fr; gap:62px; align-items:center; padding-block:105px 96px; }
+    .eyebrow, .section-label { font:700 11px/1.4 Arial,sans-serif; text-transform:uppercase; letter-spacing:.21em; color:var(--accent); }
+    h1 { font-size:clamp(62px, 8vw, 111px); font-weight:400; letter-spacing:-.065em; line-height:.98; margin:23px 0 25px; }
+    .chinese-name { font-size:25px; letter-spacing:.08em; color:var(--muted); margin-left:12px; vertical-align:middle; white-space:nowrap; }
+    .hero-lead { max-width:620px; font-size:clamp(22px,2.5vw,31px); line-height:1.32; letter-spacing:-.025em; margin:0 0 27px; }
+    .hero-copy { max-width:545px; color:#536367; margin:0; }
+    .hero-actions { display:flex; flex-wrap:wrap; gap:20px; margin-top:35px; align-items:center; font:700 12px Arial,sans-serif; letter-spacing:.08em; text-transform:uppercase; }
+    .button { background:var(--deep); color:white; padding:16px 22px; border:1px solid var(--deep); transition:background .2s,color .2s; }
+    .button:hover { background:var(--accent); border-color:var(--accent); }
+    .text-link { border-bottom:1px solid currentColor; padding-block:8px; }
+    .figure-card { background:#e9e9e0; border:1px solid #dce0d9; aspect-ratio: 4/4.5; display:grid; place-items:center; position:relative; overflow:hidden; }
+    .figure-card:before { content:''; position:absolute; inset:20px; border:1px solid #d1d9d4; pointer-events:none; }
+    .figure-card svg { width:100%; height:100%; }
+    .figure-caption { position:absolute; bottom:35px; left:36px; color:#697978; font:10px Arial,sans-serif; text-transform:uppercase; letter-spacing:.16em; }
+    section { scroll-margin-top:25px; }
+    .section { border-top:1px solid var(--line); padding-block:74px 82px; }
+    .section-head { display:grid; grid-template-columns:250px 1fr; gap:45px; margin-bottom:30px; }
+    h2 { font-size:clamp(37px,4vw,54px); letter-spacing:-.045em; line-height:1.08; font-weight:400; margin:0; }
+    .section-intro { max-width:680px; font-size:20px; line-height:1.48; margin:0; }
+    .research-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin-top:48px; }
+    .research-item { border-top:2px solid var(--deep); padding-top:19px; }
+    .index { color:var(--accent); font:700 11px Arial,sans-serif; letter-spacing:.12em; }
+    h3 { font-size:24px; line-height:1.2; font-weight:400; letter-spacing:-.025em; margin:15px 0 13px; }
+    .research-item p { color:#617073; margin:0; font-size:16px; }
+    .publications { list-style:none; padding:0; margin:38px 0 0; border-top:1px solid var(--line); }
+    .publication { display:grid; grid-template-columns:88px minmax(0,1fr) 88px; gap:26px; align-items:start; border-bottom:1px solid var(--line); padding:23px 0 25px; }
+    .pub-year { color:var(--accent); font:700 13px Arial,sans-serif; padding-top:5px; }
+    .pub-title { display:block; font-size:21px; line-height:1.35; letter-spacing:-.015em; }
+    .pub-title:hover { color:var(--accent); }
+    .pub-meta { color:var(--muted); font-size:14px; margin:7px 0 0; }
+    .pub-link { color:var(--accent); font:700 11px Arial,sans-serif; text-transform:uppercase; letter-spacing:.12em; text-align:right; padding-top:8px; }
+    .pub-link:hover { text-decoration:underline; }
+    .about { background:var(--deep); color:#f6f4ed; padding-block:83px 90px; }
+    .about-grid { display:grid; grid-template-columns:250px 1fr; gap:45px; }
+    .about .section-label { color:#e4af91; }
+    .about h2 { color:#fff; }
+    .about-copy { max-width:730px; }
+    .about-copy p { margin:0 0 19px; font-size:19px; line-height:1.55; color:#dce4e1; }
+    .about-copy p:last-child { margin-bottom:0; }
+    .contact { display:flex; align-items:start; justify-content:space-between; gap:35px; padding-block:73px 80px; }
+    .contact h2 { margin:10px 0 16px; }
+    .contact p { margin:0; color:var(--muted); }
+    .contact-links { display:flex; gap:16px; flex-wrap:wrap; padding-top:28px; font:700 12px Arial,sans-serif; text-transform:uppercase; letter-spacing:.1em; }
+    .contact-links a { border:1px solid #bbc8c5; padding:13px 17px; }
+    .contact-links a:hover { background:var(--deep); color:white; border-color:var(--deep); }
+    footer { border-top:1px solid var(--line); color:#778481; font:12px Arial,sans-serif; padding:24px 0 31px; }
+    .footer-inner { display:flex; justify-content:space-between; gap:15px; }
+    @media(max-width:800px) { .hero { grid-template-columns:1fr; padding-block:66px; gap:45px; } .figure-card { max-width:520px; width:100%; aspect-ratio:4/3.4; } .section-head,.about-grid { grid-template-columns:1fr; gap:17px; } .research-grid { grid-template-columns:1fr; gap:30px; } .contact { flex-direction:column; } .contact-links { padding-top:0; } }
+    @media(max-width:560px) { .wrap { width:min(100% - 36px,1120px); } .nav { min-height:67px; } .nav-links { gap:16px; font-size:10px; letter-spacing:.05em; } .nav-links a:first-child { display:none; } .brand { font-size:14px; } h1 { font-size:68px; } .chinese-name { font-size:19px; margin-left:8px; } .hero-lead { font-size:24px; } .figure-card { aspect-ratio:1; } .figure-caption { left:26px; bottom:25px; } .section { padding-block:55px 64px; } .publication { grid-template-columns:50px 1fr; gap:12px; } .pub-link { grid-column:2; text-align:left; padding:0; } .pub-title { font-size:19px; } .about { padding-block:62px; } .footer-inner { flex-direction:column; } }
+    @media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } .button { transition:none; } }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="wrap nav" aria-label="Main navigation">
+      <a class="brand" href="#top" aria-label="Liang Li, back to top"><span class="brand-mark" aria-hidden="true">L</span><span>Liang Li</span></a>
+      <div class="nav-links"><a href="#research">Research</a><a href="#publications">Publications</a><a href="#about">About</a><a href="#contact">Contact</a></div>
+    </nav>
+  </header>
+  <main id="top">
+    <div class="wrap hero">
+      <div>
+        <div class="eyebrow">Theoretical nuclear physics · UCAS</div>
+        <h1>Liang Li <span class="chinese-name" lang="zh-Hans">李良</span></h1>
+        <p class="hero-lead">Following the dynamics of heavy-ion collisions, from first contact to the formation of new nuclei.</p>
+        <p class="hero-copy">I study fusion, quasifission, and shell effects in reactions relevant to superheavy elements. My work uses time-dependent density functional theory and connects microscopic trajectories with reaction observables.</p>
+        <div class="hero-actions"><a class="button" href="#research">Explore research <span aria-hidden="true">↗</span></a><a class="text-link" href="#publications">Selected papers</a></div>
+      </div>
+      <div class="figure-card" role="img" aria-label="Schematic drawing of two approaching nuclei and possible fusion or reseparation paths">
+        <svg viewBox="0 0 500 570" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs><radialGradient id="n1"><stop stop-color="#d79167"/><stop offset="1" stop-color="#a94d36"/></radialGradient><radialGradient id="n2"><stop stop-color="#e5cd93"/><stop offset="1" stop-color="#b8a071"/></radialGradient></defs>
+          <g fill="none" stroke="#bdc8c1" stroke-width="1"><path d="M40 115H460M40 285H460M40 455H460" stroke-dasharray="2 7"/><path d="M70 40V530M250 40V530M430 40V530" stroke-dasharray="2 7"/><circle cx="250" cy="280" r="198"/><circle cx="250" cy="280" r="128"/></g>
+          <g fill="none" stroke="#5d7576" stroke-width="1.5"><path d="M52 281 C130 281 159 281 207 281"/><path d="M356 281 C401 281 423 281 456 281"/><path d="M286 313 C340 368 391 387 445 410"/><path d="M288 249 C339 200 393 171 451 159"/></g>
+          <g fill="#5d7576"><path d="m199 276 9 5-9 5z"/><path d="m448 276 9 5-9 5z"/><path d="m442 403 10 11-15-2z"/><path d="m444 155 11 1-8 8z"/></g>
+          <ellipse cx="210" cy="281" rx="70" ry="77" fill="url(#n1)" opacity=".97"/><ellipse cx="292" cy="281" rx="93" ry="105" fill="url(#n2)" opacity=".95"/>
+          <path d="M176 224c-27 26-30 82-8 112M315 189c55 18 76 88 58 144" fill="none" stroke="#fff" opacity=".45" stroke-width="1.5"/>
+          <circle cx="245" cy="282" r="4" fill="#fff" opacity=".8"/>
+          <g fill="#486368" font-family="Arial,sans-serif" font-size="11" letter-spacing="1.6"><text x="53" y="266">ENTRANCE</text><text x="385" y="268">FUSION</text><text x="359" y="135">TRANSFER</text><text x="354" y="431">RESEPARATION</text></g>
+        </svg>
+        <span class="figure-caption">Reaction pathways · schematic</span>
+      </div>
+    </div>
+    <section class="section" id="research"><div class="wrap">
+      <div class="section-head"><div class="section-label">01 / Research</div><div><h2>Microscopic dynamics,<br>observable outcomes.</h2><p class="section-intro" style="margin-top:24px">A heavy-ion collision can lead to a compound nucleus or reseparate before equilibration. I study how nuclear structure, geometry, and dissipation shape that choice.</p></div></div>
+      <div class="research-grid">
+        <article class="research-item"><span class="index">01</span><h3>Fusion &amp; superheavy nuclei</h3><p>Connecting capture and post-capture dynamics to fusion probabilities and evaporation-residue production.</p></article>
+        <article class="research-item"><span class="index">02</span><h3>Quasifission &amp; shell effects</h3><p>Tracing how orientation, beam energy, and shell structure steer mass flow and fragment formation.</p></article>
+        <article class="research-item"><span class="index">03</span><h3>Microscopic methods</h3><p>Using TDHF and nuclear energy-density functionals, with extensions for pairing, fluctuations, and particle-number projection.</p></article>
+      </div>
+    </div></section>
+    <section class="section" id="publications"><div class="wrap">
+      <div class="section-head"><div class="section-label">02 / Publications</div><div><h2>Selected publications</h2><p class="section-intro" style="margin-top:22px">Recent work on fusion and quasifission in heavy-ion reactions.</p></div></div>
+      <ol class="publications">
+        <li class="publication"><span class="pub-year">2026</span><div><a class="pub-title" href="https://doi.org/10.1103/jyz5-pkg4" target="_blank" rel="noopener noreferrer">Microscopic quasifission dynamics of the ⁵⁴Cr + ²⁴³Am reaction</a><p class="pub-meta">Liang Li and Lu Guo · Physical Review C <strong>114</strong>, 014626</p></div><a class="pub-link" href="https://doi.org/10.1103/jyz5-pkg4" target="_blank" rel="noopener noreferrer" aria-label="Open 2026 Physical Review C paper">Paper ↗</a></li>
+        <li class="publication"><span class="pub-year">2026</span><div><a class="pub-title" href="https://doi.org/10.1051/epjconf/202636800014" target="_blank" rel="noopener noreferrer">Microscopic Investigation of Fusion and Quasifission Dynamics</a><p class="pub-meta">Liang Li, Xiang-Xiang Sun, and Lu Guo · EPJ Web of Conferences <strong>368</strong>, 00014</p></div><a class="pub-link" href="https://www.epj-conferences.org/articles/epjconf/abs/2026/24/epjconf_hias2025_00014/epjconf_hias2025_00014.html" target="_blank" rel="noopener noreferrer" aria-label="Open 2026 EPJ paper">Paper ↗</a></li>
+        <li class="publication"><span class="pub-year">2024</span><div><a class="pub-title" href="https://doi.org/10.1103/PhysRevC.110.064607" target="_blank" rel="noopener noreferrer">Impact of tensor forces on quasifission product yield distributions</a><p class="pub-meta">Liang Li, Lu Guo, K. Godbey, and A. S. Umar · Physical Review C <strong>110</strong>, 064607</p></div><a class="pub-link" href="https://doi.org/10.1103/PhysRevC.110.064607" target="_blank" rel="noopener noreferrer" aria-label="Open 2024 Physical Review C paper">Paper ↗</a></li>
+        <li class="publication"><span class="pub-year">2022</span><div><a class="pub-title" href="https://doi.org/10.1016/j.physletb.2022.137349" target="_blank" rel="noopener noreferrer">Impact of tensor force on quantum shell effects in quasifission reactions</a><p class="pub-meta">Liang Li, Lu Guo, K. Godbey, and A. S. Umar · Physics Letters B <strong>833</strong>, 137349</p></div><a class="pub-link" href="https://doi.org/10.1016/j.physletb.2022.137349" target="_blank" rel="noopener noreferrer" aria-label="Open 2022 Physics Letters B paper">Paper ↗</a></li>
+      </ol>
+    </div></section>
+    <section class="about" id="about"><div class="wrap about-grid"><div class="section-label">03 / About</div><div class="about-copy"><h2>About me</h2><p style="margin-top:28px">I am a theoretical nuclear physicist at the School of Nuclear Science and Technology, University of Chinese Academy of Sciences (UCAS), in Beijing. My research examines low-energy heavy-ion reactions with microscopic many-body methods.</p><p>I work with Lu Guo and have collaborated with Kyle Godbey and A. S. Umar on quasifission, tensor forces, and the dynamics of superheavy-element formation.</p></div></div></section>
+    <section class="wrap contact" id="contact"><div><div class="section-label">04 / Contact</div><h2>Get in touch.</h2><p>Find my work and research profiles below.</p></div><div class="contact-links"><a href="https://orcid.org/0000-0001-5908-3881" target="_blank" rel="noopener noreferrer">ORCID ↗</a><a href="https://github.com/liliang183" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div></section>
+  </main>
+  <footer><div class="wrap footer-inner"><span>© 2026 Liang Li · 李良</span><span>School of Nuclear Science and Technology · UCAS</span></div></footer>
+</body>
+</html>
